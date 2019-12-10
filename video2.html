@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Video inmersivo</title>
+    <script src="https://aframe.io/releases/0.9.0/aframe.min.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function (event) {
+
+            vid.play();
+            videoShere.components.material.material.map.image.play();
+        })
+    </script>
+</head>
+
+<body>
+
+    <a-scene>
+        <a-assets>
+            <video id="video"
+                src="https://video.360cities.net/storyandmorecom/01669269_Pyramids-Aerial-360-VR-Stock-video-Footage-at-Egypt-Ancient-pharaonic-video-footage-ID2-3-1920x960.mp4"
+                webkit-playsinline autoplay></video>
+        </a-assets>
+        <a-entity camera="userHeight: 1.6" look-controls cursor="rayOrigin: mouse"></a-entity>
+        <a-videosphere id="videoShere" loop="true" src="#video" rotation="0 -90 0"></a-videosphere>
+    </a-scene>
+</body>
+
+</html>
